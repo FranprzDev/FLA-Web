@@ -1,4 +1,4 @@
-import { google } from "googleapis"
+import { auth as googleAuth, sheets as googleSheets } from "googleapis/build/src/apis/sheets"
 
 function requiredEnv(name: string) {
   const value = process.env[name]?.trim()
@@ -17,12 +17,12 @@ function getSheetsClient() {
         private_key: requiredEnv("GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY").replace(/\\n/g, "\n"),
       }
 
-  const auth = new google.auth.GoogleAuth({
+  const auth = new googleAuth.GoogleAuth({
     credentials,
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   })
 
-  return google.sheets({ version: "v4", auth })
+  return googleSheets({ version: "v4", auth })
 }
 
 function quotedSheetName(sheetName: string) {
