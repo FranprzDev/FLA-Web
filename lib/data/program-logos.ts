@@ -19,6 +19,14 @@ const LOGO_FILE_BY_SLUG: Record<string, string> = {
   "decidir-con-ciencia": "Decidir_con_Ciencia.png"
 };
 
+const LOGO_SIZE_CLASS_BY_SLUG: Record<string, string> = {
+  lideres: "h-[72%] w-[72%]"
+};
+
+export function getProgramLogoSizeClass(slug: string): string {
+  return LOGO_SIZE_CLASS_BY_SLUG[slug] ?? "h-full w-full";
+}
+
 export function getProgramLogoSrc(slug: string): string | undefined {
   const fileName = LOGO_FILE_BY_SLUG[slug];
   if (!fileName) return undefined;

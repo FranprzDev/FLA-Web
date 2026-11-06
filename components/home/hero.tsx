@@ -40,10 +40,10 @@ export default function Hero() {
 
           <div className="w-full">
             <Image
-              src="/images/DSC_0044.webp"
+              src="/images/hero-portada-1600.webp"
               alt={t("hero.imageAlt")}
-              width={1400}
-              height={500}
+              width={1600}
+              height={1067}
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 92vw, 1400px"
               className="w-full h-[260px] sm:h-[320px] lg:h-[420px] rounded-3xl sm:rounded-[52px] lg:rounded-[72px] shadow-[0_30px_80px_rgba(144,20,14,0.16)] object-cover"
               priority

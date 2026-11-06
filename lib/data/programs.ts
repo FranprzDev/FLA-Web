@@ -705,6 +705,7 @@ export const CIENCIA_FUERA_DE_LA_CAJA_DATA: ProgramData = {
 };
 
 export const DECIDIR_CON_CIENCIA_DATA: ProgramData = {
+  enrollmentOpen: false,
   title: "Decidir con Ciencia",
   slug: "decidir-con-ciencia",
   status: 'active',
@@ -906,6 +907,7 @@ export const AVENTURA_MATEMATICA_DATA: ProgramData = {
 };
 
 export const LIDERES_DATA: ProgramData = {
+  enrollmentOpen: false,
   title: "Líderes",
   slug: "lideres",
   status: 'active',
@@ -1018,8 +1020,8 @@ export const ALL_PROGRAMS: ProgramData[] = [
   IMPULSATEC_DATA,
   CIENCIA_FUERA_DE_LA_CAJA_DATA,
   AVENTURA_MATEMATICA_DATA,
-  LIDERES_DATA,
-  DECIDIR_CON_CIENCIA_DATA
+  DECIDIR_CON_CIENCIA_DATA,
+  LIDERES_DATA
 ];
 
 export const ACTIVE_PROGRAMS: ProgramData[] = ALL_PROGRAMS.filter(p => p.status === 'active');
